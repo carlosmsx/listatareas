@@ -21,6 +21,12 @@ const Formulario = () => {
         setTarea("")
     }
 
+    const borrarTarea = (nombre) =>
+    {
+        let arregloNuevo = arregloTareas.filter((tarea)=>{return tarea!==nombre;});
+        setArregloTareas(arregloNuevo);
+    }
+
     //aqui va el maquetado y un poquito de logica
     return (
         <div>
@@ -38,7 +44,7 @@ const Formulario = () => {
                     </Button>
                 </Form.Group>
             </Form>
-            <ListaTareas arregloTareas={arregloTareas}/>
+            <ListaTareas arregloTareas={arregloTareas} borrarTarea={borrarTarea}/>
         </div>
     );
 };
