@@ -5,6 +5,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Formulario from './components/Formulario'
 
 const App = () => {
+    const API = process.env.REACT_APP_TASKS_API;
+    console.log(API);
+
     return (
         <div>
             <section className="container my-5">
